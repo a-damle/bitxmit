@@ -109,6 +109,10 @@ module bitxmittb;
      command = `CMDSTOP;   @(posedge clk); @(posedge ready); command = `CMDWAIT; @(posedge clk);
 
      command = `CMDIDLE;  @(posedge clk); 
+     
+     @(posedge clk); 
+     @(posedge clk); 
+     $finish;
 
      end
 
